@@ -166,13 +166,14 @@ fieldset > input:last-child:hover {
     border-radius: 10px;
     border: 5px solid #000;
     padding: none;
+    overflow: scroll;
 }
   
   .modalContent {
     background-color: #F0E1C5;
     width: auto;
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
     border-radius: 10px;
     margin: 10px 10px 0 10px;
     padding-right: none !important;
