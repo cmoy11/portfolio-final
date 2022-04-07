@@ -450,15 +450,15 @@ main > div {
 }
 
 .one{
-    background-image: url("/images/pandamonium.jpg");
+    background-image: url("../images/pandamonium.jpg");
 }
 
 .two{
-    background-image: url("/images/racing.jpg");
+    background-image: url("../images/racing.jpg");
 }
 
 .three{
-    background-image: url("/images/sidewinder.jpg")
+    background-image: url("../images/sidewinder.jpg")
 }
 
 .head > h3 {
