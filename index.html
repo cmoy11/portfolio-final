@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/cmoylogo.png">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6c81e0b95a.js" crossorigin="anonymous"></script>
+	<title>Cameron Moy</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-86LYHF4HTK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-86LYHF4HTK');
+    </script>
+</head>
+
+<body>
+	<header>
+        <a class="skip" href=#main>Skip to Main Content</a>
+        <div class="header_content">
+		    <nav>
+                <div class="dropdown">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </div>
+			    <ul>
+                    <li class="active"><a href = "index.html">About Me</a></li>
+				    <li><a href = "work.html">Work Experience</a></li>
+				    <li><a href = "community.html">Community Engagement</a></li>
+				    <li><a href = "personal.html">Personal Life</a></li>
+			    </ul>
+		    </nav>
+            <h1>Cameron Moy</h1>
+        </div>
+        
+	</header>
+
+	<main>
+        <div class="aboutme" id="main">
+            <img class = "headshot" src="images/headshot.jpg" alt = "Headshot"/>
+            
+            <div>
+                <h2>Welcome!</h2>
+                <p>    
+                    I am so glad you are here. On this page you will find more information on my work experience, community engagement, and personal life. As an extrovert, I love meeting new people, so feel free to reach out! 
+                </p>
+            </div>
+        </div>
+         
+        <div class="me">
+            <h3>A little bit about me...</h3>
+            
+            <div class="megrid">
+                <p>
+                    I am currently a Sophomore at the University of Michigan studying Information Analytics at the School of Information with a double minor in Social Class and Inequalities Studies and Music. Originally hailing from Okemos, MI (a small suburb outside of East Lansing), I have been a Michigan fan my whole life and attended my first game in the Big House in 2010! 
+                </p>
+
+                <div class="mecontainer">
+                    <img src="images/bighouse.jpg" alt = "Me at my first game in the Big House" width=200 />
+                </div>
+
+                <div class="mecontainer">
+                    <img src="images/river.jpg" alt = "Picture of me standing by a river and mountain in Colorado" width=200 />
+                </div>
+
+                <p>
+                    Outside of my love for all things data, you can find me serving in my local communities, singing with my a cappella group, Amazin' Blue, or skiing with my friends and family.
+                </p>
+            </div>
+        </div>
+        
+        <div class="missionVision">
+            <div>
+                <h3>My Mission</h3>
+        
+                <p>
+                    To develop deep, enriching relationships with family and friends; to serve and promote equity within my community, sparking lasting positive change as both a learner and a leader; to recognize and hold myself accountable to personal goals and happiness; to find joy in everything I do.
+                </p>
+		
+                <h3>My Values</h3>
+            
+                <ul>
+                    <li>Empathy</li>
+                    <li>Equity</li>
+                    <li>Community</li>
+                    <li>Connection</li>
+                    <li>Collaboration</li>
+                </ul>
+            </div>
+
+            <img src="images/cbtop.jpg" alt = "Image of me at the top of Crested Butte" width=200 />
+        </div>
+        
+        <div class="div_skills">
+            <h3>My Skills</h3>
+
+            <div class="skills">
+                <div class =  "skill">
+                    <img src="images/html.png" alt = "HTML5 Logo"/>
+                    <p>HTML</p>
+                </div>
+
+                <div class = "skill">
+                    <img src="images/css.png" alt = "CSS3 Logo"/>
+                    <p>CSS</p>
+                </div>
+
+                <div class = "skill">
+                    <img src="images/javascript.png" alt = "JavaScript Logo"/>
+                    <p>JavaScript</p>
+                </div>
+
+                <div class = "skill">
+                    <img src="images/python.png" alt = "Python Logo"/>
+                    <p>Python</p>
+                </div>
+
+                <div class = "skill">
+                    <img src="images/office.png" alt = "Microsoft Office Logo"/>
+                    <p>Microsoft<br>Office</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form">
+            <form  action="https://formspree.io/f/meqnzzok" method="POST">
+                <fieldset>
+                    <legend>Contact Me!</legend>
+                    <label for="first_name" class="name">First Name</label>
+                    <input type="text" placeholder="First Name (Required)" name="first_name" id="first_name" class="name" required>
+                        
+                    <label for="last_name" class="name">Last Name</label>
+                    <input type="text" placeholder="Last Name (Required)" name="last_name" id="last_name" class="name" required>
+        
+                    <br><label for="email">Email</label>
+                    <input type="text" placeholder="Email (Required)" name="email" id="email" required>
+        
+                    <label for="phone">Phone</label>
+                    <input type="text" placeholder="Phone Number" name="phone" id="phone">
+        
+                    <br><label for="message">Message</label>
+                    <textarea id="message" placeholder="Send me a message :)"></textarea> 
+        
+                    <br><input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+	</main>
+
+	<footer>
+        <div class="contacts">
+            <a href = "https://www.linkedin.com/in/cameron-moy-9477771bb/" target="_blank" aria-label="LinkedIn Logo"><i class="footer fa-brands fa-linkedin fa-2x"></i></a>
+            <a href = "https://www.instagram.com/cmoy.11/" aria-label="Instagram Logo" target="_blank"><i class="footer fa-brands fa-instagram-square fa-2x"></i></a>
+
+            <div class="resume">
+                <button onclick="openModal()" id="resumeButton" aria-label="Resume Logo"><i class="footer fa-solid fa-file-lines fa-2x"></i></button>
+
+                <div class="modal" id="resumeModal">
+                    <div class="modalContent">
+                        <span onclick="closeModal()" class="close">&times;</span>
+                        <embed src="docs/CMoyResume.pdf"/> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+	</footer>
+
+    <script>
+        var modal = document.querySelector("#resumeModal");
+        var button = document.querySelector("#resumeButton");
+        var close = document.querySelector(".close");
+        function openModal() {
+            modal.style.display = "block";
+        }
+        function closeModal() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    </script>
+
+</body>
+</html>
