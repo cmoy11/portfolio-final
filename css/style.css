@@ -97,7 +97,9 @@ nav ul li:hover {
 /* Form Styling */
 .form {
     background-color:#7688a3;
-    margin: 0;
+    padding: 4vw;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 
 form {
@@ -274,15 +276,22 @@ footer {
 main {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 10px;
+    row-gap: 2vw;
     background-color:#d6deea;
+    padding: 4vw 4vw 0 4vw;
+}
+
+.copy {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .content {
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
-    column-gap: 1vw;
+    column-gap: 10px;
     row-gap: 2vw;
     padding: 15px;
     background-color: #F0E1C5;
@@ -299,6 +308,13 @@ main {
     grid-column: 1 / 3;
 }
 
+.div_skills {
+    background-color: #F0E1C5;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 20px;
+}
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -312,7 +328,7 @@ main {
     padding: 1vw;
 }
 
-.flip-card-front > img {
+.skill img {
     width: 15vw;
     padding-bottom: 0.25em;
 }
@@ -360,7 +376,7 @@ p {
     font-family: 'Palanquin', sans-serif;
     font-weight: lighter;
     font-size: 3vw;
-    margin-bottom: 20px;
+    margin-bottom: 3vw;
 }
 
 li {
@@ -372,16 +388,17 @@ li {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
+    justify-items: center;
     column-gap: 15px;
-    margin: 30px 20px 0px 20px;
+    padding: 20px;
+    background-color: #F0E1C5;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 
 .headshot {
     border-radius: 50%;
-}
-
-main > div {
-    margin: 15px;
+    width: 75%;
 }
 
 .mecontainer > img {
@@ -399,8 +416,9 @@ main > div {
 
 .me {
     background-color: #7688a3;
-    padding: 30px;
-    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 
 .values ul li {
@@ -413,6 +431,10 @@ main > div {
     grid-template-columns: 2fr 1fr;
     align-items: center;
     column-gap: 15px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 20px;
+    background-color: #7688a3;
 }
 
 .missionVision > img {
@@ -469,10 +491,6 @@ main > div {
     padding: 15px;
 }
 
-.content:nth-child(odd) {
-    background-color: #fff;
-}
-
 .content > p {
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -524,6 +542,22 @@ main > div {
     .mecontainer {
         animation: none;
     }
+
+    .flip-card-back > p{
+        display: none;
+    }
+
+    .flip-card-front > p {
+        display: block !important;
+    }
+
+    .skill {
+        pointer-events: none;
+    }
+
+    .flip-card-front {
+        flex-direction: column;
+    }
   }
 
   @media screen and (min-width: 650px){
@@ -551,6 +585,9 @@ main > div {
       .nav_two > ul{
           display: flex;
           flex-direction: row;
+          width: auto;
+          justify-content: center;
+          margin: 0 4vw;
       }
 
       .nav_two > ul > li {
@@ -559,31 +596,58 @@ main > div {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin: 5px;
+          margin: 10px 5px;
           width: 20%;
       }
 
       p, li {
-          font-size: 2vw;
+          font-size: 2.25vw;
+      }
+
+      .content {
+          grid-template-columns: 1fr 2fr;
+          align-items: center;
+          justify-items: center;
+          row-gap: 15px;
+          column-gap: 15px;
+          padding: 20px;
+      }
+
+      .content > img {
+          max-width: 18vw;
+          grid-row: 1/5;
+      }
+
+      .content > h3 {
+          grid-row: 1/2;
+          grid-column: 2/3;
+          text-align: center;
+      }
+
+      .content > p {
+          grid-column:2/3;
+          grid-row: -1 span 1;
+      }
+
+      .content > h4  {
+          grid-column: 2/3;
+          grid-row: 2/3;
+          text-align: center;
+      }
+
+      .content > h5 {
+          grid-column: 2/4;
       }
   }
 
-  @media screen and (min-width: 950px){  
+  @media screen and (min-width: 900px){  
     .nav_two {
         width: 100%;
     }
     
     .nav_two > ul {
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
     }
-
-    /* .skill > img {
-        width: 12vw;
-    } */
-
-
 
     .skill{
         background-color: transparent;
@@ -612,12 +676,12 @@ main > div {
         position: absolute;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
+        /* -webkit-backface-visibility: hidden; Safari */
         backface-visibility: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #7688a3;
+        /* background-color: #d6deea; */
         border-radius: 10px;
     }
     
@@ -628,6 +692,74 @@ main > div {
 
     .flip-card-back > p  {
         display: block;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2vw;
+    }
+
+    .aboutme {
+        grid-column: 1 / 3;
+    }
+
+    .div_skills, .form {
+        grid-column: 1/3;
+    }
+
+    form {
+        width:70%;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    p, li {
+        font-size: 1.75vw;
+    }
+
+    nav li {
+        padding: 10px;
+    }
+
+    .content:last-of-type {
+        grid-column: 1/3;
+    }
+
+    .copy {
+        grid-column: 1/3;
+    }
+
+    .missionVision {
+        grid-template-columns: 1fr;
+    }
+
+    .missionVision > img {
+        justify-self: center;
+    }
+
+    .content > img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    h4 {
+        font-size: 2vw;
+    }
+
+    h5 {
+        font-size: 1.5vw;
+    }
+
+    h4, h5, .content > p {
+        grid-column: 1/3 !important;
     }
   }
 
