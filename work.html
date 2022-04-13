@@ -22,14 +22,14 @@
     <body>
         <header>
             <a class="skip" href=#main>Skip to Main Content</a>
-            <div class="header_content">
+            <div class="header_content" id="top">
                 <h1 class="h1_one">Work Experience</h1>
                 
-                <nav class="nav_one">
+                <nav class="nav_one" tabindex="0">
                     <div class="dropdown">
                         <i class="fa-solid fa-bars fa-2x"></i>
                     </div>
-                    <ul>
+                    <ul tabindex="0">
                         <li><a href = "index.html">About Me</a></li>
                         <li class="active"><a href = "work.html">Work Experience</a></li>
                         <li><a href = "community.html">Community Engagement</a></li>
@@ -54,7 +54,7 @@
                 <img class = "headshot" src="images/profheadshot.jpg" alt = "Personal headshot"/>
                 
                 <div>
-                    <h2>Welcome!</h2>
+                    <h2>Hello</h2>
                     <p>    
                         In holding true with my mission and values, much of my work experience revolves around the intersection of people, technology, and social justice issues. 
                     </p>
@@ -67,7 +67,9 @@
                 <h4>Research Assistant</h4>
                 <h5>February, 2022 - Present</h5>
                 <p>
-                    Selected for the University of Michigan's award-winning Development Summer Internship Program (D-SIP) as a Dobson Intern at The Women's Center of Southeastern Michigan, an Ann Arbor mental health and empowerment oriented nonprofit. During my 3 month stay with The Women's Center, I worked to  deversify and streamline the donor experience. In doing so, I assessed current revenue generation methods, completed website analysis, implemented data analytic strategies, and evaluated donor platforms , presenting and adopting propositions to the nonprofit's board of directors. Additionally, I  orchestrated a 5-day virtual walking campaign, exceeding individual contributions goals by 60% and successfully soliciting over $1,000 in product donations from local business partners. 
+                    This summer I will be identifying societal implications of technological advancements with two researchers at the School of Information, Dr. Matthew Bui and PhD candidate Alex Lu. I will be analyzing restaurateurs of colors’ digital presentation with a lens of authenticity, visibility, and algorithmic bias through Yelp API scraping, web design, GIS visualization, and qualitative interviews and examining the ramifications of the Detroit Police Department’s Project Green Light on Southeast Michigan through survey administration and community conversations with Eastside Community Network.
+
+
                 </p> 
             </div>
 
@@ -121,6 +123,8 @@
                     Collaborated with the University of Michigan Office of Development staff to promote D-SIP to the University of Michigan student body and greater community, hosting informational sessions, presenting to Michigan Student Organizations, and managing social media accounts.
                 </p>
             </div>
+
+            <a id="scrollLink" href="#top">Skip to Top</a>
             
             <p class="copy">Cameron Moy &copy; 2022</p>
         </main>
@@ -142,22 +146,7 @@
                 </div>
             </div>
         </footer>
-    </body>
 
-    <script>
-        var modal = document.querySelector("#resumeModal");
-        var button = document.querySelector("#resumeButton");
-        var close = document.querySelector(".close");
-        function openModal() {
-            modal.style.display = "block";
-        }
-        function closeModal() {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        }
-    </script>
+        <script src="js/portfolio.js"></script>
+    </body>
 </html>

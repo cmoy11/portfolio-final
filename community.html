@@ -23,14 +23,14 @@
 <body>
     <header>
         <a class="skip" href=#main>Skip to Main Content</a>
-        <div class="header_content">
+        <div class="header_content" id="top">
             <h1 class="h1_one">Community Engagement</h1>
             
-            <nav class="nav_one">
+            <nav class="nav_one" tabindex="0">
                 <div class="dropdown">
                     <i class="fa-solid fa-bars fa-2x"></i>
                 </div>
-                <ul>
+                <ul tabindex="0">
                     <li><a href = "index.html">About Me</a></li>
                     <li><a href = "work.html">Work Experience</a></li>
                     <li class="active"><a href = "community.html">Community Engagement</a></li>
@@ -56,7 +56,7 @@
             <img class = "headshot" src="images/groupwc.jpg" alt = "Group photo from my last day at the Women's Center"/>
             
             <div>
-                <h2>Welcome!</h2>
+                <h2>How's it going</h2>
                 <p>    
                     Community engagement and dedication to an equitable world have always been a crucial aspect of my identiy. From my six-year-old self walking the neighborhood collecting cans for Heifer International, to 12 years and over $5,000 to heavy involvement in social justice based organizations in high school and college, giving back has always been important to me. 
                 </p>
@@ -87,6 +87,8 @@
             </p>
         </div>
 
+        <a id="scrollLink" href="#top">Skip to Top</a>
+
         <p class="copy">Cameron Moy &copy; 2022</p>
     </main>
 
@@ -109,21 +111,6 @@
         </div>
     </footer>
 
-    <script>
-        var modal = document.querySelector("#resumeModal");
-        var button = document.querySelector("#resumeButton");
-        var close = document.querySelector(".close");
-        function openModal() {
-            modal.style.display = "block";
-        }
-        function closeModal() {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        }
-    </script>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>

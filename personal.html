@@ -21,14 +21,15 @@
 </head>
 <body>
     <header>
-        <div class="header_content">
+        <a class="skip" href=#main tabindex="0">Skip to Main Content</a>
+        <div class="header_content" id="top">
             <h1 class="h1_one">Personal Life</h1>
             
-            <nav class="nav_one">
+            <nav class="nav_one" tabindex="0">
                 <div class="dropdown">
                     <i class="fa-solid fa-bars fa-2x"></i>
                 </div>
-                <ul>
+                <ul tabindex="0">
                     <li><a href = "index.html">About Me</a></li>
                     <li><a href = "work.html">Work Experience</a></li>
                     <li><a href = "community.html">Community Engagement</a></li>
@@ -54,32 +55,14 @@
             <img src="images/pool.jpg" class="headshot" alt = "Image of me playing pool"/>
             
             <div>
-                <h2>Welcome!</h2>
+                <h2>Hi!</h2>
                 <p>    
                     I love being busy. Packing my Google Calendar is a personal hobby of mine, and as such, my personal life often blends together with my everyday life. But I wouldn't have it any other way. Below, find more about what I love!
                 </p>
             </div>
         </div>
         
-        <div class="content parallax">
-            <div class="head one">
-                <!-- <img class="head" src="images/pandamonium.jpg" alt = "Image of my a cappella fall concert"> -->
-                <h3>Singing!</h3>
-            </div>
-            
-            <img class="mid" src="images/medha.jpg" alt = "Picture of me at a store booth with my friend"/>
-            
-            
-            <p class="midp">
-                My favorite past time, I spend upwards of 7 hours a week singing with my best friends in my a cappella group Amazin' Blue, the University of Michigan's oldest all gender a cappella group. I have been singing most of my life and the opportunity to continue singing in college has been truly Amazin'! Although this is just my first year in the group, I have already traveled to Chicago to perform and put on a fabulous fall concert, but that is just the beginning. Upcoming, I am looking forward competing at ICCAs (yes like Pitch Perfect) and at BOSS, a vocal competition in Boston. Be sure to check out Amazin' Blue on Spotify!! Outside of my aca-rehearsals, I also sing with the University of Michigan Arts Chorale, the non-major choir on campus. 
-            </p>
-
-            <div class="footdiv">
-                <img class="foot" src="images/northwestern.jpg" alt = "Image of some members of my a cappella concert at our Northwestern invitational"/>
-            </div>
-        </div>
-        
-        <div class="content parallax">
+        <div class="parallax">
             <div class="head two">
                 <!-- <img class = "head" src="images/racing.jpg" alt = "Picture of me ski racing"/> -->
                 <h3>Skiing!</h3>
@@ -95,7 +78,7 @@
             </div>
         </div>
         
-        <div class="content parallax">
+        <div class="parallax">
             <div class="head three">
                 <!-- <img class="head" src="images/sidewinder.jpg" alt = "image of a gray hat I knit"/> -->
                 <h3>Knitting</h3>
@@ -111,6 +94,48 @@
                 <img class="foot" src="images/kellyhat.jpg" alt = "Image of a green hat with a pompom that I knit"/>
             </div>
         </div>
+
+        <div class="parallax">
+            <div class="head one">
+                <!-- <img class="head" src="images/pandamonium.jpg" alt = "Image of my a cappella fall concert"> -->
+                <h3>Singing!</h3>
+            </div>
+            
+            <img class="mid" src="images/medha.jpg" alt = "Picture of me at a store booth with my friend"/>
+            
+            <div class="singingContent">
+                <p class="midp">
+                    My favorite past time, I spend upwards of 7 hours a week singing with my best friends in my a cappella group Amazin' Blue, the University of Michigan's oldest all gender a cappella group. I have been singing most of my life and the opportunity to continue singing in college has been truly Amazin'! Although this is just my first year in the group, I have already traveled to Chicago to perform and put on a fabulous fall concert, but that is just the beginning. Upcoming, I am looking forward competing at ICCAs (yes like Pitch Perfect) and at BOSS, a vocal competition in Boston. Be sure to check out Amazin' Blue on Spotify!! Outside of my aca-rehearsals, I also sing with the University of Michigan Arts Chorale, the non-major choir on campus. 
+                </p>
+
+                <div class="audio">
+                    <h4>Listen to some of AB's greatest hits</h4>
+                    <audio controls id="ab">
+                        <source src="assets/ab.m4a">
+                    </audio>
+                    <button id="playAB" aria-label="GBYBR Play Button">
+                        <i class="fa-solid fa-play fa-4x"></i>
+                    </button>
+    
+                    <audio controls id="garden">
+                        <source src="assets/garden.m4a">
+                    </audio>
+                    
+                    <button id="playGarden" aria-label="Garden Play Button">
+                        <i class="fa-solid fa-play fa-4x"></i>
+                    </button>
+
+                    <p>Goodbye Yellowbrick Road</p>
+                    <p>Garden</p>
+                </div>
+            </div>
+
+            <div class="footdiv">
+                <img class="foot" src="images/northwestern.jpg" alt = "Image of some members of my a cappella concert at our Northwestern invitational"/>
+            </div>
+        </div>
+
+        <a id="scrollLink" href="#top">Skip to Top</a>
         
         <p class="copy">Cameron Moy &copy; 2022</p>
     </main>
@@ -133,21 +158,6 @@
         </div>
     </footer>
 
-    <script>
-        var modal = document.querySelector("#resumeModal");
-        var button = document.querySelector("#resumeButton");
-        var close = document.querySelector(".close");
-        function openModal() {
-            modal.style.display = "block";
-        }
-        function closeModal() {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        }
-    </script>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>
